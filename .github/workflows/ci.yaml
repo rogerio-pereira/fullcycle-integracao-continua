@@ -1,0 +1,14 @@
+name: ci-php-workflow
+on: [push]
+
+jobs:
+  check-app:
+    runs-on: ubuntu:latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: php-actions/composer@v6 # or alternative dependency management
+      - uses: php-actions/phpunit@v3
+        with:
+          - bootstrap: vendor/autoload.php
+          - php_version: 8.2
+          - configuration: ./
