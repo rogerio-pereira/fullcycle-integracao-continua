@@ -6,6 +6,6 @@ WORKDIR /var/www/html
 
 COPY . .
 
-RUN composer install
+# RUN composer install
 
 CMD ["php", "/var/www/html/src/Math.php"]
