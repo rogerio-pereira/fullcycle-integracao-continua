@@ -12,5 +12,3 @@ jobs:
           bootstrap: vendor/autoload.php
           php_version: 8.2
           configuration: ./
-      - run: composer install
-      - run: ./vendor/bin/phpunit
