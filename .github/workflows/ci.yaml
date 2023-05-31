@@ -18,9 +18,8 @@ jobs:
           bootstrap: vendor/autoload.php
           php_version: ${{ matrix.php }}
           configuration: ./
-  build-docker-image:
-    runs-on: ubuntu-latest
-    steps:
+
+      #Docker build    
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
 
